@@ -15,6 +15,8 @@ import { useData } from "../../contexts/DataContext";
 
 // const Page = () => {
 //   const {last} = useData()
+
+// fonction qui fait planté le test !!!//
 const Page = () => {
   const { data } = useData();
 
