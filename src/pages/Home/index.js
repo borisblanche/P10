@@ -12,8 +12,25 @@ import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
+
+// const Page = () => {
+//   const {last} = useData()
 const Page = () => {
-  const {last} = useData()
+  const { data } = useData();
+
+ 
+  if (!data || !data.focus || data.focus.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+ 
+  const last = data.focus[data.focus.length - 1];
+
+  
+  if (!last || !last.title) {
+    return <div>Loading...</div>; 
+  }
+
   return <>
     <header>
       <Menu />
