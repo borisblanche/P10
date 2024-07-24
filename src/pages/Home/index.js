@@ -13,10 +13,6 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 
-// const Page = () => {
-//   const {last} = useData()
-
-// fonction qui fait planté le test !!!//
 const Page = () => {
   const { data } = useData();
 
@@ -30,7 +26,7 @@ const Page = () => {
 
   
   if (!last || !last.title) {
-    return <div>Loading...</div>; 
+    return <div>Loading...</div>;
   }
 
   return <>
@@ -135,6 +131,13 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
+        {/* <EventCard
+          imageSrc={data.last?.cover}
+          title={data.last?.title}
+          date={new Date(data.last?.date)}
+          small
+          label="boom"
+        /> */}
         <EventCard
           imageSrc={last?.cover}
           title={last?.title}

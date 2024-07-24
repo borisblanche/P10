@@ -15,6 +15,18 @@ export const api = {
     return json.json();
   },
 };
+// export const api = {
+//   loadData: async () => {
+//     const response = await fetch("/events.json");
+//     const json = await response.json();
+    
+//     if (json && json.focus && json.focus.length > 0) {
+//       json.last = json.focus[json.focus.length - 1];
+//     }
+
+//     return json;
+//   },
+// };
 
 export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
