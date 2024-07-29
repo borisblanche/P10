@@ -17,18 +17,17 @@ const Page = () => {
   const { data } = useData();
 
  
-  if (!data || !data.focus || data.focus.length === 0) {
-    return <div>Loading...</div>;
-  }
+  const defaultData = {
+    focus: [
+      { title: 'Default Event 1', cover: '/path/to/default1.jpg', date: '2023-07-20' },
+      { title: 'Default Event 2', cover: '/path/to/default2.jpg', date: '2023-07-21' },
+    ],
+  };
 
- 
-  const last = data.focus[data.focus.length - 1];
 
+  const finalData = data || defaultData;
+  const last = finalData.focus[finalData.focus.length - 1];
   
-  if (!last || !last.title) {
-    return <div>Loading...</div>;
-  }
-
   return <>
     <header>
       <Menu />

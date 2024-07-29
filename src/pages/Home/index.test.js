@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Home from "./index";
 
+
 describe("When Form is created", () => {
   it("a list of fields card is displayed", async () => {
     render(<Home />);
@@ -31,8 +32,6 @@ describe("When Form is created", () => {
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
     // to implement
-    // render(<Home />);
-    // await screen.findByText("Nos services");
   })
   it("a list a people is displayed", () => {
     // to implement
@@ -44,7 +43,5 @@ describe("When a page is created", () => {
     // to implement
   })
 });
-
-
 
 
