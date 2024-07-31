@@ -19,8 +19,7 @@ const Page = () => {
  
   const defaultData = {
     focus: [
-      { title: 'Default Event 1', cover: '/path/to/default1.jpg', date: '2023-07-20' },
-      { title: 'Default Event 2', cover: '/path/to/default2.jpg', date: '2023-07-21' },
+      { title: 'Default Event 1', cover: 'Debuggez-une-application-React.JS/src/logo.svg', date: '2023-07-20' },
     ],
   };
 
@@ -130,13 +129,6 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
-        {/* <EventCard
-          imageSrc={data.last?.cover}
-          title={data.last?.title}
-          date={new Date(data.last?.date)}
-          small
-          label="boom"
-        /> */}
         <EventCard
           imageSrc={last?.cover}
           title={last?.title}
